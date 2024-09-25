@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>联系我</title>
+    <link rel="stylesheet" href="styles.css"> <!-- 链接到相同的CSS文件，保持样式一致 -->
+</head>
+<body>
+    <header>
+        <h1>联系我</h1> <!-- 页面标题 -->
+    </header>
+
+    <nav>
+        <a href="index.html">首页</a> <!-- 导航到首页文件index.html -->
+        <a href="gallery.html">摄影作品</a> <!-- 导航到作品展示页面gallery.html -->
+        <a href="music.html">音乐作品</a>
+        <a href="video.html">视频作品</a>
+        <a href="games.html">游戏作品</a>
+        <a href="podcast.html">播客节目</a> <!-- 新增播客节目链接 -->
+        <a href="blog.html">博客</a> <!-- 新增博客页面链接 -->
+        <a href="about.html">关于我</a> <!-- 导航到关于我页面about.html -->
+        <a href="contact.html">联系我</a> <!-- 导航到联系我页面contact.html -->
+    </nav>
+
+    <section>
+        <h2>联系方式</h2> <!-- 表单标题 -->
+        <!-- 下面是联系表单 -->
+        <form action="mailto:your-email@example.com" method="POST" enctype="text/plain"> <!-- 使用mailto来直接发送邮件 -->
+            <!-- action="mailto:your-email@example.com": 当用户提交表单时，浏览器会尝试通过用户的默认邮件客户端发送邮件。你需要将your-email@example.com替换为你自己的邮箱 -->
+            <!-- method="POST": 表单提交方式为POST -->
+            <!-- enctype="text/plain": 表单的编码类型为纯文本格式 -->
+            <label for="name">姓名:</label><br> <!-- 表单的标签，用于提示用户输入姓名 -->
+            <input type="text" id="name" name="name"><br><br> <!-- 用户输入姓名的文本框 -->
+            
+            <label for="email">邮箱:</label><br> <!-- 表单的标签，用于提示用户输入邮箱 -->
+            <input type="email" id="email" name="email"><br><br> <!-- 用户输入邮箱的文本框 -->
+            
+            <label for="message">留言:</label><br> <!-- 表单的标签，用于提示用户输入留言 -->
+            <textarea id="message" name="message"></textarea><br><br> <!-- 这是一个多行文本框，允许用户输入留言 -->
+            
+            <input type="submit" value="发送"> <!-- 这是表单的提交按钮，用户点击该按钮后表单将会被提交 -->
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Joeysome个人作品集</p>
+    </footer>
+</body>
+</html>

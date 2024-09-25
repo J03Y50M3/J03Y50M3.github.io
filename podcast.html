@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>播客节目</title>
+    <link rel="stylesheet" href="styles.css"> <!-- 使用相同的CSS文件，保持一致风格 -->
+</head>
+<body>
+    <header>
+        <h1>播客节目</h1> <!-- 页面标题 -->
+    </header>
+
+    <nav>
+        <a href="index.html">首页</a> <!-- 导航到首页文件index.html -->
+        <a href="gallery.html">摄影作品</a> <!-- 导航到作品展示页面gallery.html -->
+        <a href="music.html">音乐作品</a>
+        <a href="video.html">视频作品</a>
+        <a href="games.html">游戏作品</a>
+        <a href="podcast.html">播客节目</a> <!-- 新增播客节目链接 -->
+        <a href="blog.html">博客</a> <!-- 新增博客页面链接 -->
+        <a href="about.html">关于我</a> <!-- 导航到关于我页面about.html -->
+        <a href="contact.html">联系我</a> <!-- 导航到联系我页面contact.html -->
+    </nav>
+
+    <section class="podcast-list">
+        <h2>我的播客节目</h2>
+        <p>在这里收听我制作的播客节目，探讨各类话题。</p>
+
+        <!-- 播客节目列表 -->
+        <div class="podcast-episode">
+            <h3><a href="podcast1.html">播客节目1</a></h3>
+            <p>描述：在这一期中，我讨论了如何从生活中汲取创作灵感...</p>
+            <audio controls> <!-- 嵌入音频播放器 -->
+                <source src="podcast1.mp3" type="audio/mpeg">
+                你的浏览器不支持音频播放。
+            </audio>
+        </div>
+
+        <div class="podcast-episode">
+            <h3><a href="podcast2.html">播客节目2</a></h3>
+            <p>描述：这一期节目分享了我在音乐制作过程中的基础技巧...</p>
+            <audio controls>
+                <source src="podcast2.mp3" type="audio/mpeg">
+                你的浏览器不支持音频播放。
+            </audio>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 我的个人作品集</p>
+    </footer>
+</body>
+</html>

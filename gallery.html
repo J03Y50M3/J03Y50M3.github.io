@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>摄影作品</title>
+    <link rel="stylesheet" href="styles.css"> <!-- 链接到相同的CSS文件，保持风格一致 -->
+</head>
+<body>
+    <header>
+        <h1>作品展示</h1> <!-- 页面标题 -->
+    </header>
+
+    <nav>
+        <a href="index.html">首页</a> <!-- 导航到首页文件index.html -->
+        <a href="gallery.html">摄影作品</a> <!-- 导航到作品展示页面gallery.html -->
+        <a href="music.html">音乐作品</a>
+        <a href="video.html">视频作品</a>
+        <a href="games.html">游戏作品</a>
+        <a href="podcast.html">播客节目</a> <!-- 新增播客节目链接 -->
+        <a href="blog.html">博客</a> <!-- 新增博客页面链接 -->
+        <a href="about.html">关于我</a> <!-- 导航到关于我页面about.html -->
+        <a href="contact.html">联系我</a> <!-- 导航到联系我页面contact.html -->
+    </nav>
+
+    <section class="gallery"> <!-- 作品展示的图片部分，可以根据需要添加更多图片 -->
+    <!-- 第一张图片和描述 -->
+    <figure>  <!-- figure标签用于包裹图片和描述，表示一个图像及其相关的说明 -->
+        <img src="photo1.jpeg" alt="摄影作品1" onclick="openLightbox(this)">  <!-- img标签显示图片，src指定图片路径，alt用于图片无法加载时的替代文本 -->
+        <figcaption>草原与少年</figcaption>  <!-- figcaption标签用于为图片添加说明或标题 -->
+    </figure>
+
+    <!-- 第二张图片和描述 -->
+    <figure>
+        <img src="photo2.jpeg" alt="摄影作品2" onclick="openLightbox(this)">
+        <figcaption>接亲的电梯</figcaption>
+    </figure>
+
+    <!-- 第三张图片和描述 -->
+    <figure>
+        <img src="photo3.jpeg" alt="摄影作品3" onclick="openLightbox(this)">
+        <figcaption>加班的午夜</figcaption>
+    </figure>
+
+    <!-- 第四张图片和描述 -->
+    <figure>
+        <img src="photo4.jpeg" alt="摄影作品4" onclick="openLightbox(this)">
+        <figcaption>满意的微笑</figcaption>
+    </figure>
+    </section>
+
+    <!-- Lightbox结构 -->
+    <div id="lightbox" class="lightbox">
+        <span class="close" onclick="closeLightbox()">&times;</span> <!-- 关闭按钮 -->
+        <img class="lightbox-content" id="lightbox-img"> <!-- 弹出的图片 -->
+        <!-- 新增“上一张”和“下一张”按钮 -->
+        <a class="prev" onclick="changeSlide(-1)">&#10094;</a> <!-- 左箭头 -->
+        <a class="next" onclick="changeSlide(1)">&#10095;</a> <!-- 右箭头 -->
+    </div>
+
+    <script>
+        var currentIndex = 0;  // 当前显示的图片索引
+        var images = document.querySelectorAll('.gallery img');  // 获取所有的图片
+    
+        // 打开 Lightbox 并显示点击的图片
+        function openLightbox(element) {
+            var lightbox = document.getElementById("lightbox");
+            var lightboxImg = document.getElementById("lightbox-img");
+            lightbox.style.display = "block";  // 显示 Lightbox
+            lightboxImg.src = element.src;  // 显示点击的图片
+            currentIndex = Array.prototype.indexOf.call(images, element); // 记录当前图片的索引
+        }
+    
+        // 关闭 Lightbox
+        function closeLightbox() {
+            var lightbox = document.getElementById("lightbox");
+            lightbox.style.display = "none";  // 隐藏 Lightbox
+        }
+    
+        // 切换图片：n 为 1 表示下一张，-1 表示上一张
+        function changeSlide(n) {
+            currentIndex += n;  // 更新当前图片索引
+            if (currentIndex < 0) {
+                currentIndex = images.length - 1;  // 如果当前索引小于0，跳到最后一张
+            } else if (currentIndex >= images.length) {
+                currentIndex = 0;  // 如果当前索引大于等于图片数量，跳到第一张
+            }
+            var lightboxImg = document.getElementById("lightbox-img");
+            lightboxImg.src = images[currentIndex].src;  // 显示新的图片
+        }
+    </script>
+    
+    <footer>
+        <p>&copy; 2024 Joeysome个人作品集</p>
+    </footer>
+</body>
+</html>

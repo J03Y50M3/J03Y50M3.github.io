@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>视频作品</title>
+    <link rel="stylesheet" href="styles.css"> <!-- 使用相同的CSS文件，保持一致的风格 -->
+</head>
+<body>
+    <header>
+        <h1>视频作品</h1> <!-- 页面标题 -->
+    </header>
+
+    <nav>
+        <a href="index.html">首页</a> <!-- 导航到首页文件index.html -->
+        <a href="gallery.html">摄影作品</a> <!-- 导航到作品展示页面gallery.html -->
+        <a href="music.html">音乐作品</a>
+        <a href="video.html">视频作品</a>
+        <a href="games.html">游戏作品</a>
+        <a href="podcast.html">播客节目</a> <!-- 新增播客节目链接 -->
+        <a href="blog.html">博客</a> <!-- 新增博客页面链接 -->
+        <a href="about.html">关于我</a> <!-- 导航到关于我页面about.html -->
+        <a href="contact.html">联系我</a> <!-- 导航到联系我页面contact.html -->
+    </nav>
+
+    <section class="video-gallery">
+        <h2>我的视频创作</h2>
+        <p>这里展示了我参与制作的视频项目。你可以点击下方链接观看完整视频或预览。</p>
+        
+        <!-- 视频列表 -->
+        <div class="video">
+            <h3><a href="video1.html">视频作品1</a></h3> <!-- 链接到具体的视频页面 -->
+            <p>描述：这是一部关于XXX主题的短片。</p>
+            <video controls width="600"> <!-- 直接在页面中嵌入视频播放 -->
+                <source src="video1.mp4" type="video/mp4">
+                你的浏览器不支持视频播放。
+            </video>
+        </div>
+
+        <div class="video">
+            <h3><a href="video2.html">视频作品2</a></h3>
+            <p>描述：这是一个纪录片项目，讲述了XXXX。</p>
+            <video controls width="600">
+                <source src="video2.mp4" type="video/mp4">
+                你的浏览器不支持视频播放。
+            </video>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 我的个人作品集</p>
+    </footer>
+</body>
+</html>
